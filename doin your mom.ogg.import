@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bietwqyir01b4"
+path="res://.godot/imported/doin your mom.ogg-ccb8ab296f026a2c26e1f6950621bdfe.oggvorbisstr"
+
+[deps]
+
+source_file="res://doin your mom.ogg"
+dest_files=["res://.godot/imported/doin your mom.ogg-ccb8ab296f026a2c26e1f6950621bdfe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

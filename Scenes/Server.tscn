@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctgq3phanvykh"]
+
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_wuqgp"]
+[ext_resource type="PackedScene" uid="uid://c8govo5bdtd17" path="res://World/world.tscn" id="2_cydca"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game" type="Node3D" parent="."]
+script = ExtResource("1_wuqgp")
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="Game"]
+_spawnable_scenes = PackedStringArray("res://addons/fpc/character.tscn")
+spawn_path = NodePath("../Players")
+
+[node name="ContainerSpawner" type="MultiplayerSpawner" parent="Game"]
+_spawnable_scenes = PackedStringArray("res://Scenes/Container.tscn")
+spawn_path = NodePath("../Containers")
+
+[node name="Players" type="Node3D" parent="Game"]
+
+[node name="Containers" type="Node3D" parent="Game"]
+
+[node name="Camera3D" type="Camera3D" parent="Game"]
+transform = Transform3D(-0.657418, 0.406508, -0.63447, 0, 0.842002, 0.539474, 0.753526, 0.35466, -0.553548, -12.1379, 7.56345, -12.1072)
+current = true
+
+[node name="World" parent="Game" instance=ExtResource("2_cydca")]
+
+[node name="Inventory" type="Control" parent="Game"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Game/Inventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryContainers" type="Node3D" parent="Game"]
+
+[node name="InvContainerSpawner" type="MultiplayerSpawner" parent="Game"]
+_spawnable_scenes = PackedStringArray("res://Scenes/inventory.tscn")
+spawn_path = NodePath("../InventoryContainers")

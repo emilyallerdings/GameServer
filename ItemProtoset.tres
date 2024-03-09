@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="ItemProtoset" load_steps=2 format=3 uid="uid://cxc4g76khiw4k"]
+
+[ext_resource type="Script" path="res://addons/gloot/core/item_protoset.gd" id="1_nfmar"]
+
+[resource]
+script = ExtResource("1_nfmar")
+json_data = "[
+    {
+        \"height\": 1,
+        \"id\": \"TestItem1\",
+        \"image\": \"res://icon.png\",
+        \"width\": 1
+    },
+    {
+        \"height\": 1,
+        \"id\": \"TestItem2\",
+        \"image\": \"res://icon.png\",
+        \"width\": 2
+    },
+    {
+        \"height\": 2,
+        \"id\": \"TestItem3\",
+        \"image\": \"res://icon.png\",
+        \"width\": 2
+    },
+    {
+        \"height\": 5,
+        \"id\": \"Backpack\",
+        \"image\": \"res://Assets/backpack.png\",
+        \"width\": 4,
+		\"type\": \"backpack\"
+    }
+]"
